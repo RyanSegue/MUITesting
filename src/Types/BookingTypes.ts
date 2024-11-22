@@ -1,0 +1,15 @@
+export interface BookingTableItem {
+    id: number,
+    production: string,
+    date: string,
+    week: number,
+    venueDetails: string,
+    town: string,
+    dayType: string,
+    bookingStatus: string,
+    capacity: number,
+    noPerformances: number,
+    performanceTimes: string,
+    miles: number,
+    travelTime: number,
+}

@@ -1,7 +1,7 @@
 import React from "react";
-import { DashboardPanelData } from "../Data/DashboardData";
-import DashboardPanel from "../Components/Dashboard/DashboardPanel";
 import { Grid2 } from "@mui/material";
+import DashboardPanel from "../Components/Dashboard/DashboardPanel";
+import { DashboardPanelData } from "../Data/DashboardData";
 
 const Dashboard = () => {
     return (
@@ -12,11 +12,12 @@ const Dashboard = () => {
                         <DashboardPanel 
                             title={panel.text}
                             color={panel.color}
-                            icon={panel.icon()}
+                            icon={panel.icon}
+                            path={panel.path}
                         />
-                   </Grid2>
+                    </Grid2>
                 )
-            })}
+            })} 
         </Grid2>
     )
 }
