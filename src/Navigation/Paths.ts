@@ -1,10 +1,5 @@
 const PATHS = {
-    Dashboard: '/',
-    Bookings: '/Booking',
-    Marketing: '/Marketing',
-    ProjectManagment: '/ProjectManagment',
-    Contracts: '/Contracts',
-    SystemAdmin: '/SystemAdmin',
-}
+  Dashboard: "/",
+};
 
 export default PATHS;

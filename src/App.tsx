@@ -1,26 +1,35 @@
-import './App.css';
-import React from 'react';
-import Header from './Components/Header/Header';
-import { BrowserRouter } from 'react-router-dom';
-import AppRouter from './Navigation/Router';
-import { Box } from '@mui/material';
+import "./App.css";
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import AppRouter from "./Navigation/Router";
+import { Box, Typography } from "@mui/material";
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
+import { LocalizationProvider } from "@mui/x-date-pickers";
 
 function App() {
   return (
-    <Box sx={{height: '1000px'}}>
-      <Box sx={{height: '5%'}}>
-        <Header />
-      </Box>
-      <Box sx={{height: '90%'}}>
+    <LocalizationProvider dateAdapter={AdapterDateFns}>
+      <Box sx={{ height: "1000px" }}>
         <div className="App">
           <header className="App-header">
-              <BrowserRouter>
-                <AppRouter />
-              </BrowserRouter>
+            <Box sx={{ width: "100%" }}>
+              <Typography
+                style={{ textAlign: "left" }}
+                fontSize={25}
+                fontWeight={"bold"}
+                marginBottom={5}
+                padding={2}
+              >
+                Testing
+              </Typography>
+            </Box>
+            <BrowserRouter>
+              <AppRouter />
+            </BrowserRouter>
           </header>
         </div>
       </Box>
-    </Box>
+    </LocalizationProvider>
   );
 }
 

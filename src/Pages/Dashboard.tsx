@@ -1,25 +1,43 @@
 import React from "react";
-import { Grid2 } from "@mui/material";
-import DashboardPanel from "../Components/Dashboard/DashboardPanel";
-import { DashboardPanelData } from "../Data/DashboardData";
+import Buttons from "../Components/ButtonsShowcase";
+import TextInputShowcase from "../Components/TextInputShowcase";
+import ShowcaseSection from "../Components/ShowcaseSection";
+import SelectShowcase from "../Components/AutoSelectShowcase";
+import LoaderShowcase from "../Components/LoaderShowcase";
+import CalendarShowcase from "../Components/CalendarShowcase";
+import ModalShowcase from "src/Components/ModalShowcase";
+import GraphShowcase from "src/Components/GraphShowcase";
+import SnackbarShowcase from "src/Components/SnackbarShowcase";
 
 const Dashboard = () => {
-    return (
-        <Grid2 container rowSpacing={2.5} columnSpacing={2.5} sx={{width: 1000}}>
-            {DashboardPanelData.map((panel) => {
-                return (
-                    <Grid2 size={4}>
-                        <DashboardPanel 
-                            title={panel.text}
-                            color={panel.color}
-                            icon={panel.icon}
-                            path={panel.path}
-                        />
-                    </Grid2>
-                )
-            })} 
-        </Grid2>
-    )
-}
+  return (
+    <div style={{ width: "100%" }}>
+      <ShowcaseSection sectionName="Button Showcase">
+        <Buttons />
+      </ShowcaseSection>
+      <ShowcaseSection sectionName="Text Input Showcase">
+        <TextInputShowcase />
+      </ShowcaseSection>
+      <ShowcaseSection sectionName="Select Showcase">
+        <SelectShowcase />
+      </ShowcaseSection>
+      <ShowcaseSection sectionName="Loader Showcase">
+        <LoaderShowcase />
+      </ShowcaseSection>
+      <ShowcaseSection sectionName="Calendar Showcase">
+        <CalendarShowcase />
+      </ShowcaseSection>
+      <ShowcaseSection sectionName="Modal Showcase">
+        <ModalShowcase />
+      </ShowcaseSection>
+      <ShowcaseSection sectionName="Snackbar Showcase">
+        <SnackbarShowcase />
+      </ShowcaseSection>
+      <ShowcaseSection sectionName="Graph Showcase">
+        <GraphShowcase />
+      </ShowcaseSection>
+    </div>
+  );
+};
 
 export default Dashboard;
